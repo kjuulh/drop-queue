@@ -1,0 +1,23 @@
+[package]
+name = "nodrop"
+edition = "2024"
+description = "nodrop, is a simple drop queue system for async operations. (Until async-drop is a thing)"
+license = "MIT"
+repository = "https://github.com/kjuulh/nodrop"
+authors = ["kjuulh <contact@kasperhermansen.com>"]
+
+version.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+
+async-trait = { version = "0.1" }
+
+notmad = { version = "0.7.2", optional = true }
+tokio-util = { version = "0.7", optional = true }
+
+[features]
+default = []
+notmad = ["dep:notmad", "dep:tokio-util"]
