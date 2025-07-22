@@ -3,13 +3,13 @@
 base: "git@git.front.kjuulh.io:kjuulh/cuddle-rust-lib-plan.git"
 
 vars:
-  service: "nodrop"
+  service: "drop-queue"
   registry: kasperhermansen
 
 please:
   project:
     owner: kjuulh
-    repository: "nodrop"
+    repository: "drop-queue"
     branch: main
   settings:
     api_url: "https://git.front.kjuulh.io"

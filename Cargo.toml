@@ -6,7 +6,7 @@ resolver = "2"
 version = "0.0.2"
 
 [workspace.dependencies]
-nodrop = { path = "crates/nodrop" }
+drop-queue = { path = "crates/drop-queue" }
 
 anyhow = { version = "1" }
 tokio = { version = "1", features = ["full"] }

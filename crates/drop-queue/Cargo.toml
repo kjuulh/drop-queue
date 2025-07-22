@@ -1,9 +1,9 @@
 [package]
-name = "nodrop"
+name = "drop-queue"
 edition = "2024"
-description = "nodrop, is a simple drop queue system for async operations. (Until async-drop is a thing)"
+description = "drop-queue, is a simple drop queue system for async operations. (Until async-drop is a thing)"
 license = "MIT"
-repository = "https://github.com/kjuulh/nodrop"
+repository = "https://github.com/kjuulh/drop-queue"
 authors = ["kjuulh <contact@kasperhermansen.com>"]
 
 version.workspace = true

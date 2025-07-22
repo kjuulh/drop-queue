@@ -160,7 +160,7 @@ mod notmad {
     #[async_trait]
     impl notmad::Component for DropQueue {
         fn name(&self) -> Option<String> {
-            Some("nodrop/drop-queue".into())
+            Some("drop-queue/drop-queue".into())
         }
 
         async fn run(&self, cancellation_token: CancellationToken) -> Result<(), MadError> {

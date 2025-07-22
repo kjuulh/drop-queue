@@ -74,6 +74,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9555578bc9e57714c812a1f84e4fc5b4d21fcb063490c624de019f7464c91268"
 
 [[package]]
+name = "drop-queue"
+version = "0.0.1"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "notmad",
+ "tokio",
+ "tokio-util",
+ "tracing",
+]
+
+[[package]]
 name = "futures"
 version = "0.3.31"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -237,18 +249,6 @@ dependencies = [
  "libc",
  "wasi 0.11.1+wasi-snapshot-preview1",
  "windows-sys 0.59.0",
-]
-
-[[package]]
-name = "nodrop"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "async-trait",
- "notmad",
- "tokio",
- "tokio-util",
- "tracing",
 ]
 
 [[package]]

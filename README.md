@@ -1,6 +1,6 @@
-# 🧊 nodrop
+# 🧊 drop-queue
 
-**`nodrop`** is a simple, composable async drop queue for Rust — built to run queued tasks in FIFO order and ensure graceful shutdown via draining. It's useful in lifecycle-managed environments (e.g., `notmad`) or as a lightweight alternative until async drop is stabilized in Rust.
+**`drop-queue`** is a simple, composable async drop queue for Rust — built to run queued tasks in FIFO order and ensure graceful shutdown via draining. It's useful in lifecycle-managed environments (e.g., `notmad`) or as a lightweight alternative until async drop is stabilized in Rust.
 
 > 💡 Tasks are executed one at a time. If the queue is marked for draining, no further items can be added.
 
@@ -22,14 +22,14 @@
 
 ```toml
 [dependencies]
-nodrop = "*"
+drop-queue = "*"
 ```
 
 ### Enable `notmad` integration (optional)
 
 ```toml
 [dependencies]
-nodrop = { version = "*", features = ["notmad"] }
+drop-queue = { version = "*", features = ["notmad"] }
 ```
 
 ---
@@ -37,7 +37,7 @@ nodrop = { version = "*", features = ["notmad"] }
 ## 🛠 Example
 
 ```rust
-use nodrop::DropQueue;
+use drop-queue::DropQueue;
 use tokio::sync::oneshot;
 
 #[tokio::main]
@@ -69,7 +69,7 @@ If using the [`notmad`](https://crates.io/crates/notmad) lifecycle framework:
 ```rust
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    let queue = nodrop::DropQueue::new();
+    let queue = drop-queue::DropQueue::new();
     let app = notmad::Mad::new().add(queue);
     app.run().await?;
     Ok(())
