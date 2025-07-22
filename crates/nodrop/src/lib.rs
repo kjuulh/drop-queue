@@ -107,13 +107,17 @@ impl DropQueue {
         loop {
             tokio::select! {
                 _ = cancellation_token.cancelled() => {
-                    return Ok(())
+                    break;
                 },
                 res = self.process_next() => {
                     res?;
                 }
             }
         }
+
+        self.drain().await?;
+
+        Ok(())
     }
 }
 
