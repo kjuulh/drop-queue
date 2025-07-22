@@ -22,14 +22,14 @@
 
 ```toml
 [dependencies]
-nodrop = { git = "https://github.com/kjuulh/nodrop" }
+nodrop = "*"
 ```
 
 ### Enable `notmad` integration (optional)
 
 ```toml
 [dependencies]
-nodrop = { git = "https://github.com/kjuulh/nodrop", features = ["notmad"] }
+nodrop = { version = "*", features = ["notmad"] }
 ```
 
 ---
