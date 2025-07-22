@@ -5,6 +5,7 @@ description = "drop-queue, is a simple drop queue system for async operations. (
 license = "MIT"
 repository = "https://github.com/kjuulh/drop-queue"
 authors = ["kjuulh <contact@kasperhermansen.com>"]
+readme = "./../../README.md"
 
 version.workspace = true
 
