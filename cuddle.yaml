@@ -6,6 +6,9 @@ vars:
   service: "drop-queue"
   registry: kasperhermansen
 
+  rust:
+    publish: {}
+
 please:
   project:
     owner: kjuulh
