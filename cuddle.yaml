@@ -12,6 +12,6 @@ please:
     repository: "drop-queue"
     branch: main
   settings:
-    api_url: "https://git.front.kjuulh.io"
+    api_url: "https://git.kjuulh.io"
   actions:
     rust:
