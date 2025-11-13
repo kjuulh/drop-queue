@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.6] - 2025-11-13
+
+### Added
+- add rust publish
+
 ## [0.0.5] - 2025-11-13
 
 ### Fixed
