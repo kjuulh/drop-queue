@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.9] - 2025-12-19
+
+### Other
+- *(deps)* update rust crate tracing to v0.1.44
+- *(deps)* update rust crate tracing to v0.1.43
+
 ## [0.0.8] - 2025-11-15
 
 ### Other
