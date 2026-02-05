@@ -151,16 +151,14 @@ where
 
 #[cfg(feature = "notmad")]
 mod notmad {
-    use async_trait::async_trait;
-    use notmad::MadError;
+    use notmad::{ComponentInfo, MadError};
     use tokio_util::sync::CancellationToken;
 
     use crate::DropQueue;
 
-    #[async_trait]
     impl notmad::Component for DropQueue {
-        fn name(&self) -> Option<String> {
-            Some("drop-queue/drop-queue".into())
+        fn info(&self) -> ComponentInfo {
+            "drop-queue/drop-queue".into()
         }
 
         async fn run(&self, cancellation_token: CancellationToken) -> Result<(), MadError> {
